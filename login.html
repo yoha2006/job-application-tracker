@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="top-bar">
+
+            <div>
+                <h1>Job Application Tracker</h1>
+                <p id="welcomeMessage"></p>
+            </div>
+
+            <button id="logoutButton">Logout</button>
+
+        </div>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h2 id="totalApplications">0</h2>
+                <p>Total Applications</p>
+            </div>
+
+            <div class="card">
+                <h2 id="shortlisted">0</h2>
+                <p>Shortlisted</p>
+            </div>
+
+            <div class="card">
+                <h2 id="interviews">0</h2>
+                <p>Interviews</p>
+            </div>
+
+            <div class="card">
+                <h2 id="selected">0</h2>
+                <p>Selected</p>
+            </div>
+
+        </div>
+
+        <div class="form-section">
+
+            <h2>Add Job Application</h2>
+
+            <input
+                type="text"
+                id="companyInput"
+                placeholder="Company Name"
+            >
+
+            <input
+                type="text"
+                id="roleInput"
+                placeholder="Job Role"
+            >
+
+            <input
+                type="date"
+                id="dateInput"
+            >
+
+            <select id="statusInput">
+                <option>Applied</option>
+                <option>Shortlisted</option>
+                <option>Interview</option>
+                <option>Rejected</option>
+                <option>Selected</option>
+            </select>
+
+            <button id="addButton">Add Application</button>
+
+        </div>
+
+        <div class="applications">
+
+            <h2>My Applications</h2>
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search company or job role"
+                >
+
+                <select id="filterStatus">
+
+                    <option value="All">All Status</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Shortlisted">Shortlisted</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Selected">Selected</option>
+
+                </select>
+
+            </div>
+
+            <div id="applicationList"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
